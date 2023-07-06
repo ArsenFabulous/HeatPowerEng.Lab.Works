@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
+import AsideUserInterface from './components/AsideUserInterface'
+import FirstLW from './components/FirstLW'
+import MyButton from './components/MyButton'
+import SecondLW from './components/SecondLW'
+import { useAppDispatch, useAppSelector } from './hooks/redux'
+import { LWSlice } from './store/reducers/LWSlice'
+import VariantInput from './components/VariantInput'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const dispatch = useAppDispatch()
+  const { number } = useAppSelector(state => state.LWReducer)
+  switch (number) {
+    case 1:
+      return (
+        <div id='App' className='app'>
+          <AsideUserInterface />
+          <FirstLW />
+          <VariantInput />
+        </div>
+      )
+    case 2:
+      return (
+        <div id='App' className='app'>
+          <AsideUserInterface />
+          <SecondLW />
+        </div>
+      )
+    default:
+      return (
+        <div id='App' className='app'>
+          <AsideUserInterface />
+          <h1>Выберите лабораторную работу:</h1>
+          <div className='app__content'>
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            <MyButton
+              inscription='Выбор центробежного насоса, построение схемы насосной установки'
+              uniqueClass='app__content__button'
+              propFunc={() => dispatch(LWSlice.actions.numberSelection(1))}
+            />
+            <MyButton
+              inscription='Определение КПД насоса и построение его графической характеристики'
+              uniqueClass='app__content__button'
+              propFunc={() => dispatch(LWSlice.actions.numberSelection(2))}
+            />
+          </div>
+        </div>
+      )
+  }
 }
-
 export default App
