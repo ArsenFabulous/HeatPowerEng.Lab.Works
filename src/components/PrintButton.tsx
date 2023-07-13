@@ -5,24 +5,24 @@ import { ReactComponent as PdfLogo } from '../assets/download-pdf-icon.svg';
 
 const PrintButton: React.FC = () => {
     const exportPDF = () => {
-        const input = document.getElementById('App')!
+        const input = document.getElementById('root')!
         html2canvas(input, {
             logging: true,
-            letterRendering: 1,
-            useCORS: true
+            useCORS: true,
+            allowTaint: true,
         })
             .then(canvas => {
-                const imgWidth = 208;
-                const imgHeight = canvas.height * imgWidth / canvas.width;
+                const pdf = new jsPDF('l', 'mm', 'a4');
+                var width = pdf.internal.pageSize.getWidth();
+                var height = pdf.internal.pageSize.getHeight();
                 const imgData = canvas.toDataURL('img/png');
-                const pdf = new jsPDF('p', 'mm', 'a4');
-                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+                pdf.addImage(imgData, 'PNG', 0, 0, width, height);
                 pdf.save('Лабораторная работа.pdf')
             })
     }
     return (
         <button onClick={() => exportPDF()} className='PrintButton'>Сохранить
-            <PdfLogo style={{ width: '28', marginLeft: '10'}} />
+            <PdfLogo style={{ width: '28', marginLeft: '10' }} />
         </button>
     )
 }

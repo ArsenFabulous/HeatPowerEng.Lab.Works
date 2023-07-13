@@ -16,7 +16,7 @@ const AsideUserInterface: React.FC = () => {
             <PrintButton />
             {number ? <MyButton
                 inscription='К выбору лабораторной работы'
-                propFunc={() => dispatch(LWSlice.actions.numberSelection(0))}
+                propFunc={() => dispatch(LWSlice.actions.reset())}
             /> : <></>}
 
         </aside>

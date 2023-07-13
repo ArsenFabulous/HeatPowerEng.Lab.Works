@@ -1,23 +1,22 @@
 import React from 'react'
 import './App.css'
 import AsideUserInterface from './components/AsideUserInterface'
-import FirstLW from './components/FirstLW'
+import FirstLW from './components/FirstLW/FirstLW'
 import MyButton from './components/MyButton'
-import SecondLW from './components/SecondLW'
+import SecondLW from './components/SecondLW/SecondLW'
 import { useAppDispatch, useAppSelector } from './hooks/redux'
 import { LWSlice } from './store/reducers/LWSlice'
-import VariantInput from './components/VariantInput'
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
   const { number } = useAppSelector(state => state.LWReducer)
+
   switch (number) {
     case 1:
       return (
         <div id='App' className='app'>
           <AsideUserInterface />
           <FirstLW />
-          <VariantInput />
         </div>
       )
     case 2:

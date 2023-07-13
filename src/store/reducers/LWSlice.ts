@@ -6,7 +6,7 @@ interface LW {
 }
 const initialState: LW = {
     number: 0,
-    variant: -1,
+    variant: 0,
 }
 export const LWSlice = createSlice({
     name: 'LW',
@@ -18,6 +18,12 @@ export const LWSlice = createSlice({
         variantSelection: (state, action: PayloadAction<number>) => {
             state.variant = action.payload
         },
+        reset: (state) => {
+            state.number = 0
+            state.variant = 0
+
+        },
+
     }
 })
 

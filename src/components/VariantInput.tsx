@@ -1,19 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useAppDispatch, useAppSelector } from '../hooks/redux'
 import { LWSlice } from '../store/reducers/LWSlice'
 
-interface Props {
-    numberOfVariants: number,
-}
 
-const VariantInput: React.FC<Props> = ({ numberOfVariants }) => {
+const VariantInput: React.FC = () => {
     const { variant } = useAppSelector(state => state.LWReducer)
     const dispatch = useAppDispatch();
     return (
         <div className='variant'>
-            <h2>Введите номер варианта:</h2>
+            <h2>Выберите номер варианта:</h2>
             <select
-                size={numberOfVariants}
                 value={variant}
                 onChange={(e) => dispatch(LWSlice.actions.variantSelection(+(e.target.value)))}>
                 <option>0</option>
@@ -31,9 +27,7 @@ const VariantInput: React.FC<Props> = ({ numberOfVariants }) => {
                 <option>12</option>
                 <option>13</option>
                 <option>14</option>
-                <option>15</option>
             </select>
-            <button onClick={()=> console.log(variant)} >Подтвердить</button>
         </div>
     )
 }
