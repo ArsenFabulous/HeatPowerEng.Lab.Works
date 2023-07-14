@@ -237,7 +237,8 @@ th {
 
 .main {
   display: grid;
-  grid-template-columns: 0.7fr 1fr;
+  margin-left: 270px;
+  grid-template-columns: 0.7fr 0.3fr;
 }
 
 .scheme {

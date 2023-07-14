@@ -22,7 +22,6 @@ const MeasuringInstrumentFrame: React.FC<Props> = ({ device, value, imgSrc }) =>
                 onMouseLeave={() => setHover(false)}
             />
             {hover
-
                 && <dialog open className={`scheme__frame__${device}__tooltip`}>
                     <div className={`scheme__frame__${device}__tooltip__value`}>{humanReadable(+value)}</div>
                     <img

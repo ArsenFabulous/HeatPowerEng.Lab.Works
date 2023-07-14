@@ -15,6 +15,7 @@ const SecondLW: React.FC = () => {
   const [switcher, setSwitcher] = useState<boolean>(false);
   const [styleSwitcher, setStyleSwitcher] = useState<boolean>(false);
   const [isModalActive, setModalActive] = useState<boolean>(true);
+  // @ts-ignore
   const [kpdChecker, setKpdChecker] = useState<number[]>([])
 
 
