@@ -190,13 +190,13 @@ const SecondLW: React.FC = () => {
           />
         </div>
         <div>
-          <div className='forms'>
-            <div className='forms__rashod'>
+          <div className='inputs'>
+            <div className='inputs__rashod'>
               <div>Введите подачу [м³/c]:</div>
               <input onChange={(e) => setRashod(e.target.value)}></input>
               <button onClick={() => animate(+rashod)}>Симуляция процесса</button>
             </div>
-            <div className='forms__rashod'
+            <div className='inputs__rashod'
               style={{
                 border: (styleSwitcher ?
                   '4px solid green' : '1px solid black'

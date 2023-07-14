@@ -9,7 +9,7 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  padding-top: 10vh;
+  padding-top: 11vh;
 
 }
 
@@ -158,7 +158,12 @@ td,
 th {
   padding-right: 4px;
   border: 1px solid black;
+}
 
+.hint__list {
+  width: 375px;
+  background-color: white;
+  border: 3px dashed red;
 }
 
 /* PumpCircut */
@@ -402,34 +407,34 @@ dialog div {
   left: 145px;
 }
 
-.forms {
+.inputs {
   display: flex;
   flex-direction: column;
 }
 
-.forms>div {
+.inputs>div {
   border: 1px solid black;
 }
 
 
-.forms>div>input {
+.inputs>div>input {
   width: 150px;
 }
 
-.forms__rashod {
+.inputs__rashod {
 
   display: flex;
   flex-direction: row;
 }
 
-.forms>div>div {
+.inputs>div>div {
   width: 305px;
 }
 
-.forms>div>button {
+.inputs>div>button {
   width: 335px;
 }
 
-.forms>div>input {
+.inputs>div>input {
   width: 100px;
 }

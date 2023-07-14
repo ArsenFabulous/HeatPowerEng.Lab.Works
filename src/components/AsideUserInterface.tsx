@@ -4,6 +4,7 @@ import MyButton from './MyButton'
 import PrintButton from './PrintButton';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import { LWSlice } from '../store/reducers/LWSlice';
+import Hint from './Hint';
 
 const AsideUserInterface: React.FC = () => {
     const dispatch = useAppDispatch()
@@ -14,10 +15,12 @@ const AsideUserInterface: React.FC = () => {
         <aside className='aside-interface'>
             <StudentInfo />
             <PrintButton />
+
             {number ? <MyButton
                 inscription='К выбору лабораторной работы'
                 propFunc={() => dispatch(LWSlice.actions.reset())}
             /> : <></>}
+            <Hint />
 
         </aside>
     )

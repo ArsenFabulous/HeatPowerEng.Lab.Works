@@ -2,7 +2,6 @@ import React from 'react'
 
 interface Props {
     dragElem: boolean[],
-    // dragHandler: React.DragEventHandler<HTMLDivElement>,
     imgSrc: string,
     onDrag: React.DragEventHandler<HTMLDivElement>
 }

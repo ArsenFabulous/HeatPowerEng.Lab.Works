@@ -45,7 +45,7 @@ const FirstLW: React.FC = () => {
                     </div>
                     <div className='forms__container'>
                         <h5>Расчётные данные:</h5>
-                        <InputForm label={<label>Re</label>} dataValue={dataValue[9]} />
+                        <InputForm label={<label>Re</label>} dataValue={dataValue[19]} />
                         <InputForm label={<label>λ</label>} dataValue={dataValue[20]} />
                         <div><label>H, м</label><input value={head} onChange={(e) => setHead((e.target.value))}></input></div>
                         <div><label>N<sub>дв</sub></label><input value={power} onChange={(e) => setPower((e.target.value))}></input></div>
