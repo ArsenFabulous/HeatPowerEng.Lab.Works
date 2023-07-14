@@ -105,7 +105,7 @@ const PumpCircut: React.FC = () => {
                 onDragLeave={leaveHandler}
                 onDragOver={dragWithPreventHandler}
             >
-                <img src='public\LW1\FullCircut.jpg' className='circut' />
+                <img src='dist\LW1\FullCircut.jpg' className='circut' />
                 <DropElement
                     dragElem={drag1P}
                     onDrop={dropHandler1P}
