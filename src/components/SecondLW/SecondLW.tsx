@@ -167,25 +167,25 @@ const SecondLW: React.FC = () => {
     <div><>
       <div className='main'>
         <div className='scheme'>
-          <img className='scheme__pic' src='public\LW2\centrifugalScheme.svg' />
+          <img className='scheme__pic' src='https://raw.githubusercontent.com/ArsenFabulous/HeatPowerEng.Lab.Works/524abefa96bec2eb4fbf74671273fa490fd98576/public/LW2/centrifugalScheme.svg' />
           <MeasuringInstrumentFrame
             device='manometer'
-            imgSrc='public\LW2\manometer.svg'
+            imgSrc='https://raw.githubusercontent.com/ArsenFabulous/HeatPowerEng.Lab.Works/524abefa96bec2eb4fbf74671273fa490fd98576/public/LW2/manometer.svg'
             value={pressure}
           />
           <MeasuringInstrumentFrame
             device='vacuum'
-            imgSrc='public\LW2\vacuumGauge.svg'
+            imgSrc='https://raw.githubusercontent.com/ArsenFabulous/HeatPowerEng.Lab.Works/524abefa96bec2eb4fbf74671273fa490fd98576/public/LW2/vacuumGauge.svg'
             value={vacuum}
           />
           <MeasuringInstrumentFrame
             device='flowMeter'
-            imgSrc='public\LW2\flowMeter.svg'
+            imgSrc='https://raw.githubusercontent.com/ArsenFabulous/HeatPowerEng.Lab.Works/524abefa96bec2eb4fbf74671273fa490fd98576/public/LW2/flowMeter.svg'
             value={rashod}
           />
           <MeasuringInstrumentFrame
             device='wattmeter'
-            imgSrc='public\LW2\wattmeter.svg'
+            imgSrc='https://raw.githubusercontent.com/ArsenFabulous/HeatPowerEng.Lab.Works/524abefa96bec2eb4fbf74671273fa490fd98576/public/LW2/wattmeter.svg'
             value={power}
           />
         </div>

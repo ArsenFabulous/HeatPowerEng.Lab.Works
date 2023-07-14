@@ -72,32 +72,32 @@ const PumpCircut: React.FC = () => {
                 <DragElement
                     dragElem={drag1P}
                     onDrag={dragHandler1p}
-                    imgSrc='public\LW1\1part.jpg'
+                    imgSrc='https://github.com/ArsenFabulous/HeatPowerEng.Lab.Works/blob/main/public/LW1/1part.jpg?raw=true'
                 />
                 <DragElement
                     dragElem={drag2P}
                     onDrag={dragHandler2p}
-                    imgSrc='public\LW1\2part.jpg'
+                    imgSrc='https://github.com/ArsenFabulous/HeatPowerEng.Lab.Works/blob/main/public/LW1/2part.jpg?raw=true'
                 />
                 <DragElement
                     dragElem={drag3P}
                     onDrag={dragHandler3p}
-                    imgSrc='public\LW1\3part.jpg'
+                    imgSrc='https://github.com/ArsenFabulous/HeatPowerEng.Lab.Works/blob/main/public/LW1/3part.jpg?raw=true'
                 />
                 <DragElement
                     dragElem={drag4P}
                     onDrag={dragHandler4p}
-                    imgSrc='public\LW1\4part.jpg'
+                    imgSrc='https://github.com/ArsenFabulous/HeatPowerEng.Lab.Works/blob/main/public/LW1/4part.jpg?raw=true'
                 />
                 <DragElement
                     dragElem={drag5P}
                     onDrag={dragHandler5p}
-                    imgSrc='public\LW1\5part.jpg'
+                    imgSrc='https://github.com/ArsenFabulous/HeatPowerEng.Lab.Works/blob/main/public/LW1/5part.jpg?raw=true'
                 />
                 <DragElement
                     dragElem={drag6P}
                     onDrag={dragHandler6p}
-                    imgSrc='public\LW1\6part.jpg'
+                    imgSrc='https://github.com/ArsenFabulous/HeatPowerEng.Lab.Works/blob/main/public/LW1/6part.jpg?raw=true'
                 />
             </div>
             <div className='puzzle'
@@ -105,7 +105,7 @@ const PumpCircut: React.FC = () => {
                 onDragLeave={leaveHandler}
                 onDragOver={dragWithPreventHandler}
             >
-                <img src='dist\LW1\FullCircut.jpg' className='circut' />
+                <img src='https://github.com/ArsenFabulous/HeatPowerEng.Lab.Works/blob/main/public/LW1/FullCircut.jpg?raw=true' className='circut' />
                 <DropElement
                     dragElem={drag1P}
                     onDrop={dropHandler1P}
