@@ -13,7 +13,7 @@ const VariantInput: React.FC = () => {
                 value={variant}
                 onChange={(e) => dispatch(LWSlice.actions.variantSelection(+(e.target.value)))}>
                 <option>0</option>
-                <option>1</option>
+                {/* <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
@@ -26,7 +26,7 @@ const VariantInput: React.FC = () => {
                 <option>11</option>
                 <option>12</option>
                 <option>13</option>
-                <option>14</option>
+                <option>14</option> */}
             </select>
         </div>
     )
