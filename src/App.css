@@ -166,6 +166,10 @@ th {
   border: 3px dashed red;
 }
 
+.hint__list__img {
+  width: 300px;
+}
+
 /* PumpCircut */
 
 .blocks {
